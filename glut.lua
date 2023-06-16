@@ -325,6 +325,9 @@ function init()
     params:add_taper(v.."pitch", v..sep.."pitch", -24, 24, 0, 0, "st")
     params:set_action(v.."pitch", function(value) engine.pitch(v, math.pow(0.5, -value / 12)) end)
 
+    params:add_taper(v.."pan", v..sep.."pan", -100, 100, 0, 0, "%")
+    params:set_action(v.."pan", function(value) engine.pan(v, value / 100) end)
+
     params:add_taper(v.."spread", v..sep.."spread", 0, 100, 0, 0, "%")
     params:set_action(v.."spread", function(value) engine.spread(v, value / 100) end)
 
