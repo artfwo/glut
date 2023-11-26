@@ -10,7 +10,7 @@
 -- patterns using grid row 1
 --
 
-engine.name = 'Glut'
+engine.name = 'StereoGlut'
 local g = grid.connect()
 
 local VOICES = 7
@@ -291,7 +291,6 @@ function init()
   metro_blink:start()
 
   local sep = ": "
-
   params:add_taper("reverb_mix", "*"..sep.."mix", 0, 100, 50, 0, "%")
   params:set_action("reverb_mix", function(value) engine.reverb_mix(value / 100) end)
 
